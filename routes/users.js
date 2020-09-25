@@ -34,7 +34,6 @@ router.post('/auth',(req,res,next)=>{
         if(!user){
             res.json({success: false, message:'Faild to find user'})
         }
-        console.log(user)
         User.comparePassword(password, user.password, (err, isMatch)=>{
             if(err) throw err;
             if(isMatch){
