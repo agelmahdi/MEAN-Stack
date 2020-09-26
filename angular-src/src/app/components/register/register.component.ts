@@ -24,6 +24,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   onRegisterSubmit(){
     const user ={
       name: this.name,
@@ -50,4 +51,7 @@ export class RegisterComponent implements OnInit {
       }
     });
   }
+}
+export interface UserData {
+  success: String;
 }
